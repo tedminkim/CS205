@@ -2,7 +2,7 @@ from os import path
 from array import *
 from copy import deepcopy
 import sys
-import numpy as np
+#import numpy as np
 import csv
 
 #Global variables
@@ -43,7 +43,7 @@ def featureSearch(colNum, row, columnFeature, userInput):
         currSetFeatures = []
     elif userInput == '2': #If user picks backward elimination.
         algoName = "Backward Elimination"
-        currSetFeatures = np.arange(1, colNum, 1) #https://numpy.org/doc/stable/reference/generated/numpy.arange.html using numpy library in order to create a currSetFeatures withe every feature
+        #currSetFeatures = np.arange(1, colNum, 1) #https://numpy.org/doc/stable/reference/generated/numpy.arange.html using numpy library in order to create a currSetFeatures withe every feature
 
     print("Hello, world!! We have officially entered " + algoName + "!\n")
     accuracyArr = []
@@ -192,7 +192,7 @@ def main():
             #print(y)
             outputArr.append(y)
         columnFeature.append(outputArr)
-    f3.close()
+        f3.close()
 
 
     while userInput != '1' and userInput != '2': #User is asked to choose either 1 or 2 as correct inputs, for one of the two provided algorithms.
